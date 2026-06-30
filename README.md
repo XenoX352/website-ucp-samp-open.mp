@@ -87,6 +87,7 @@ From managing characters and vehicles to tracking donations and referrals, every
 - **[Tailwind CSS](https://tailwindcss.com/)** – Utility‑first CSS framework for rapid styling.
 - **[Bootstrap Icons](https://icons.getbootstrap.com/)** – High‑quality, open‑source icon library.
 - **[Chart.js](https://www.chartjs.org/)** – Flexible JavaScript charting (via `react-chartjs-2`).
+- **[sweetalert2.js]([https://www.chartjs.org/](https://sweetalert2.github.io/))** – Notifaction Libabry`).
 - **[Axios](https://axios-http.com/)** – Promise‑based HTTP client.
 - **[React Router DOM](https://reactrouter.com/)** – Declarative routing.
 
