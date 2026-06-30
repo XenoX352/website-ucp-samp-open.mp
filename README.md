@@ -1,4 +1,3 @@
-<!-- PROJECT LOGO -->
 <br />
 <div align="center">
   <a href="https://github.com/your-username/ucp-website">
@@ -10,7 +9,7 @@
   <p align="center">
     A modern, fully responsive <strong>User Control Panel</strong> for your game server or community.
     <br />
-    Built with React, Express, Tailwind CSS & Bootstrap Icons.
+    Built with React, Express, Tailwind CSS, MySQL, and Argon2.
     <br />
     <a href="https://github.com/your-username/ucp-website"><strong>Explore the docs »</strong></a>
     <br />
@@ -23,16 +22,14 @@
   </p>
 </div>
 
-<!-- BADGES -->
 <div align="center">
 
   ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
   ![Express](https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white)
   ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
-  ![Bootstrap Icons](https://img.shields.io/badge/Bootstrap_Icons-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
-  ![Chart.js](https://img.shields.io/badge/Chart.js-FF6384?style=for-the-badge&logo=chartdotjs&logoColor=white)
-  ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
-  ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
+  ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+  ![Argon2](https://img.shields.io/badge/Argon2-8A2BE2?style=for-the-badge&logo=linux&logoColor=white)
+  ![SweetAlert2](https://img.shields.io/badge/SweetAlert2-7367F0?style=for-the-badge&logo=sweetalert2&logoColor=white)
   ![JWT](https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=JSON%20web%20tokens&logoColor=white)
 
 </div>
@@ -41,11 +38,10 @@
 
 ## About The Project
 
-The **UCP Website** is a full‑stack web application designed to give your players complete control over their in‑game experience.  
+The **UCP Website** is a professional full‑stack web application designed to give your players complete control over their in‑game experience.  
 From managing characters and vehicles to tracking donations and referrals, everything is presented in a clean, modern interface enhanced by **Tailwind CSS** and enriched with over **2,000 Bootstrap Icons**.
 
-> **Why this UCP?**  
-> Because a traditional control panel should not look boring. We combined the power of React for seamless interactivity, Express for robust API, and a design system that adapts to any device.
+> **Why this UCP?** > Traditional control panels shouldn't be boring. This platform combines the interactive performance of React, a highly secure **Argon2** encryption layer, and a robust **MySQL** relational database designed to scale seamlessly with your server's player base.
 
 ---
 
@@ -54,11 +50,12 @@ From managing characters and vehicles to tracking donations and referrals, every
 | Feature | Description |
 |--------|-------------|
 | **Landing Page** | Eye‑catching introduction to your server with call‑to‑action buttons. |
-| **Register & Login** | Secure authentication with JWT, hashed passwords, and role‑based access. |
+| **Register & Login** | Enterprise-grade security using **Argon2** password hashing and JWT role‑based access control. |
+| **Elegant Popups** | Fully customized modals, confirmations, and alerts powered by **SweetAlert2**. |
 | **Player Dashboard** | Personal statistics, quick access to all owned assets, and recent activities. |
 | **Admin Dashboard** | Global overview, user management, and moderation tools with live charts. |
 | **Character System** | Create, edit, and delete characters; assign them to different game worlds. |
-| **Vehicle System** | Manage vehicles tied to each character with full CRUD operations. |
+| **Vehicle System** | Manage vehicles tied to each character with full ACID-compliant CRUD operations. |
 | **House System** | Own and customize houses; set spawn points and interior upgrades. |
 | **Referral System** | Unique referral codes, invite tracking, and rewards for successful referrals. |
 | **Donate System** | Browse donation packages, complete payments, and view transaction history. |
@@ -85,18 +82,19 @@ From managing characters and vehicles to tracking donations and referrals, every
 ### Frontend
 - **[React](https://reactjs.org/)** – Component‑based UI library.
 - **[Tailwind CSS](https://tailwindcss.com/)** – Utility‑first CSS framework for rapid styling.
+- **[SweetAlert2](https://sweetalert2.github.io/)** – Beautiful, responsive, and highly customizable popup notifications.
 - **[Bootstrap Icons](https://icons.getbootstrap.com/)** – High‑quality, open‑source icon library.
 - **[Chart.js](https://www.chartjs.org/)** – Flexible JavaScript charting (via `react-chartjs-2`).
 - **[Axios](https://axios-http.com/)** – Promise‑based HTTP client.
-- **[React Router DOM](https://reactrouter.com/)** – Declarative routing.
+- **[React Router DOM](https://reactrouter.com/)** – Declarative routing system.
 
 ### Backend
-- **[Node.js](https://nodejs.org/)** – JavaScript runtime.
-- **[Express](https://expressjs.com/)** – Minimalist web framework.
-- **[MongoDB](https://www.mongodb.com/)** + **[Mongoose](https://mongoosejs.com/)** – NoSQL database and ODM.
-- **[jsonwebtoken](https://github.com/auth0/node-jsonwebtoken)** – Token‑based authentication.
-- **[bcryptjs](https://github.com/dcodeIO/bcrypt.js)** – Password hashing.
-- **[cors](https://github.com/expressjs/cors)**, **[dotenv](https://github.com/motdotla/dotenv)** – Security & environment variables.
+- **[Node.js](https://nodejs.org/)** – JavaScript runtime environment.
+- **[Express](https://expressjs.com/)** – Minimalist web framework for APIs.
+- **[MySQL](https://www.mysql.com/)** + **[Sequelize](https://sequelize.org/)** – Relational database Management System with an advanced Promise-based ORM.
+- **[argon2](https://github.com/ranisalt/node-argon2)** – Next-generation password hashing algorithm, winner of the Password Hashing Competition (PHC).
+- **[jsonwebtoken](https://github.com/auth0/node-jsonwebtoken)** – Secure token‑based state authentication.
+- **[cors](https://github.com/expressjs/cors)**, **[dotenv](https://github.com/motdotla/dotenv)** – Security middleware & environment configurations.
 
 ---
 
@@ -116,11 +114,6 @@ We’ve carefully selected icons to create a consistent and intuitive experience
 | **Settings** | `gear`, `shield-shaded`, `key`, `palette` |
 | **Admin Panel** | `graph-up-arrow`, `table`, `person-gear`, `exclamation-triangle-fill` |
 
-> All icons are rendered using the official **Bootstrap Icons** font, which means no additional image requests — fast and crisp on every screen.
-
----
-
-
 ---
 
 ## Quick Start
@@ -128,10 +121,10 @@ We’ve carefully selected icons to create a consistent and intuitive experience
 Follow these steps to get a local copy up and running in minutes.
 
 ### Prerequisites
-- **Node.js** v16+ and npm/yarn installed
-- A **MYsQL** database
+- **Node.js** v16+ and npm/yarn installed.
+- A **MySQL** Server instance active.
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/ucp-website.git
+git clone [https://github.com/your-username/ucp-website.git](https://github.com/your-username/ucp-website.git)
 cd ucp-website
